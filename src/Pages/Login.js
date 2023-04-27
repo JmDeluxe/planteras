@@ -36,16 +36,10 @@ export default function Login() {
             <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
             <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
   
-            <div className='d-flex justify-content-center mb-4'>
-              <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-            </div>
   
             <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
   
             <div className="text-center">
-  
-              <p>or sign up with:</p>
-  
               <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
                 <MDBIcon fab icon='facebook-f' size="sm"/>
               </MDBBtn>

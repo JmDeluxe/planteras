@@ -44,10 +44,6 @@ export default function Register() {
                 <MDBInput label='Repeat your password' id='form4' type='password'/>
               </div>
 
-              <div className='mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-              </div>
-
               <MDBBtn className='mb-4' size='lg'>Register</MDBBtn>
 
             </MDBCol>
