@@ -1,46 +1,72 @@
+import React from 'react';
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBCard,
+    MDBCardBody,
+    MDBCol,
+    MDBRow,
+    MDBInput,
+    MDBCheckbox,
+    MDBIcon
+  }
+  from 'mdb-react-ui-kit';
+
 export default function Login() {
     return (
+        <MDBContainer fluid>
 
-        <div class="container">
-        <div class="body d-md-flex align-items-center justify-content-between">
-            <div class="box-1 mt-md-0 mt-5">
+        <div className="p-5 bg-image" style={{backgroundImage: 'url(https://mdbootstrap.com/img/new/textures/full/171.jpg)', height: '300px'}}></div>
+  
+        <MDBCard className='mx-5 mb-5 p-5 shadow-5' style={{marginTop: '-100px', background: 'hsla(0, 0%, 100%, 0.8)', backdropFilter: 'blur(30px)'}}>
+          <MDBCardBody className='p-5 text-center'>
+  
+            <h2 className="fw-bold mb-5">Sign up now</h2>
+  
+            <MDBRow>
+              <MDBCol col='6'>
+                <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+              </MDBCol>
+  
+              <MDBCol col='6'>
+                <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
+              </MDBCol>
+            </MDBRow>
+  
+            <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+            <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
+  
+            <div className='d-flex justify-content-center mb-4'>
+              <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
             </div>
-            <div class=" box-2 d-flex flex-column h-100">
-                <div class="mt-5">
-                    <p class="mb-1 h-1">Create Account.</p>
-                    <p class="text-muted mb-2">Share your thouhts with the world form today.</p>
-                    <div class="d-flex flex-column ">
-                        <p class="text-muted mb-2">Continue with...</p>
-                        <div class="d-flex align-items-center">
-                            <a href="#" class="box me-2 selectio">
-                                <span class="fab fa-facebook-f mb-2"></span>
-                                <p class="mb-0">Facebook</p>
-                            </a>
-                            <a href="#" class="box me-2">
-                                <span class="fab fa-google mb-2"></span>
-                                <p class="mb-0">Google</p>
-                            </a>
-                            <a href="#" class="box">
-                                <span class="far fa-envelope mb-2"></span>
-                                <p class="mb-0">Email</p>
-                            </a>
-                        </div>
-                        <div class="mt-3">
-                            <p class="mb-0 text-muted">Already have an account?</p>
-                            <div class="btn btn-primary">Log in<span class="fas fa-chevron-right ms-1"></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-auto">
-                    <p class="footer text-muted mb-0 mt-md-0 mt-4">By register you agree with our
-                        <span class="p-color me-1">terms and conditions</span>and
-                        <span class="p-color ms-1">privacy policy</span>
-                    </p>
-                </div>
+  
+            <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+  
+            <div className="text-center">
+  
+              <p>or sign up with:</p>
+  
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='facebook-f' size="sm"/>
+              </MDBBtn>
+  
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='twitter' size="sm"/>
+              </MDBBtn>
+  
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='google' size="sm"/>
+              </MDBBtn>
+  
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='github' size="sm"/>
+              </MDBBtn>
+  
             </div>
-            <span class="fas fa-times"></span>
-        </div>
-    </div>
-    
+  
+          </MDBCardBody>
+        </MDBCard>
+  
+      </MDBContainer>
     )
 }
