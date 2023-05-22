@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.style{
+  color: teal;
+  font-weight: 450;
+  font-size: 40px;
+  display: flex;
+  padding-left: 20%;
+}
+.centered {
+  height: vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
