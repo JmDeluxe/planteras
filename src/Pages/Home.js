@@ -2,26 +2,38 @@ import { useState,useEffect } from "react";
 import axios from 'axios';
 
 
-function Homes(){
-  const [output,setOutput] = useState([]);
-    useEffect(() =>{
-      axios.get('https://api.publicapis.org/entries')
-      .then(response => {
-        console.log(response.data.entries);
-        setOutput(response.data.entries);
-        setOutput('asdasd');
-    });
-
-
-function Home() {
-  
-  
-    return (
-
-      <div>
-        <h1>Home</h1>
+export default function Home() {
+     const [output,setOutput] = useState([]);
+    
+     const getData = () => {
+      axios.get('https://api.quotable.io/random')
+      .then(
+        respose => {
+          console.log(respose.data);
+          setOutput(respose.data.content);
+          console.log(output);
+        }
+      ).catch(err => {
+        console.log(err)
+      })
+     }
+     
+     return (
+      <div class = 'App'>
+        <h1>Homepage</h1>
+        <view>
+        <button onClick={getData}>Generate</button>
+        </view>
+        {output ? <p>{output}</p> : null}
       </div>
     );
+
+    
 }
 
-export default Home;
+
+
+
+
+// https://api/publicapis.org/entries
+// https://api.quotable.io/random

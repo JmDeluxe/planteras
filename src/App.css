@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+.centerme {
+  flex:450;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
 .style{
   color: teal;
   font-weight: 450;
