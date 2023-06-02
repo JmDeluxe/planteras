@@ -1,18 +1,5 @@
 import { React, useEffect, useState } from 'react';
 import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-// import {
-//   MDBBtn,
-//   MDBContainer,
-//   MDBRow,
-//   MDBCol,
-//   MDBCard,
-//   MDBCardBody,
-//   MDBCardImage,
-//   MDBInput,
-//   MDBIcon,
-//   MDBCheckbox
-// }
-// from 'mdb-react-ui-kit';
 
 export default function Register() {
 

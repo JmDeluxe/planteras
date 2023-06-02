@@ -1,109 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { Dimensions, ImageBackground, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-const {height} = Dimensions.get('window')
-const windowWidth = Dimensions.get('window').width;
-import Welcome from './Pages/Welcome';
+import { Button, Dimensions, ImageBackground, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
+import Welcome from './Pages/welcomePage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Stack} from 'react-native-gesture-handler';
+import Register from './Pages/registerPage';
+import Login from './Pages/loginPage';
+import Home from './Pages/homePage';
 
-const stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <SafeAreaView>
-          <View  style ={{
-        paddingTop: 40,
-        justifyContent:'center',
-        alignItems: 'center',
-      }}>
-      <Text style = {{
-        fontSize: 20,
-      }}> L O G I N </Text>
-    </View>
-    <View style ={{
-        paddingTop: 5,
-      }}>
-      <ImageBackground 
-      style = {{
-        height: height / 2.5
-      }}
-      resizeMode='contain'
-      source={require('./assets/log-in.png')} />
-    </View>
 
-    <View style ={{
-        paddingTop: 20,
-    }}></View>
-
-    <View style={{
-      marginVertical: 4,
-      paddingLeft: 30,
-      paddingRight: 30,
-    }}>
-      <TextInput
-      placeholder='Email'
-      underlineColorAndroid="transparent"
-      style = {{
-        fontSize: 20,
-        paddingLeft: 40,
-        paddingTop: 10,
-        paddingBottom: 10,
-        backgroundColor: 'white',
-        borderRadius: 40,
-        borderColor: 'orange',
-        borderWidth: 1
-      }}
-      />
-    </View>
-
-    <View style={{
-      marginVertical: 4,
-      paddingLeft: 30,
-      paddingRight: 30,
-    }}>
-      <TextInput
-      placeholder='Password'
-      secureTextEntry
-      style = {{
-        fontSize: 20,
-        paddingLeft: 40,
-        paddingTop: 10,
-        paddingBottom: 10,
-        backgroundColor: 'white',
-        borderRadius: 40,
-        borderColor: 'orange',
-        borderWidth: 1,
-        
-      }}
-      />
-    </View>
-    <View style ={{
-        paddingTop: 20,
-    }}></View>
-
-<View style ={{
-      ustifyContent:'center',
-      alignItems: 'center',
-      paddingVertical: 1,
-      paddingHorizontal: 2
-      
-    }}> 
-      <TouchableOpacity style = {{
-      width: 200,
-      paddingVertical: 5,
-      paddingHorizontal: 20,
-      borderRadius: 50,
-      with: 50,
-      backgroundColor: 'orange',
-      }}>
-        <Text style ={{
-          color: 'black',
-          fontSize: 30,
-          textAlign: 'center'
-      }}> Login </Text>
-      </TouchableOpacity>
-    </View>
-  </SafeAreaView>
+  return(
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  cotainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonContainter: {
+    margin: 20
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 8,
+    margin: 10,
+    width: 200
+  }
+});
