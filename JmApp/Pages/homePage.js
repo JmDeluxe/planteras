@@ -7,6 +7,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { authentication } from '../firebase'
 import Ionicons from '@expo/vector-icons/Ionicons'
 
+
 export default function Home() {
   
     const[jobs, setFruit] = useState([

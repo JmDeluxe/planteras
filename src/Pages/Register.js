@@ -43,7 +43,6 @@ export default function Register() {
               </Form.Group>
             )            
           })}
-        
         <br/>
         <Button class="btn btn-success w-100" onClick={() => displayEmail()}>Submit</Button>
         <h2>Email: {emailAddress}</h2>
